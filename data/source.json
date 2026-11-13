@@ -1,0 +1,41 @@
+{
+  "partitions": [
+    {
+      "id": "p1",
+      "start": 1792886400,
+      "end": 1792972800
+    },
+    {
+      "id": "p2",
+      "start": 1792972800,
+      "end": 1793059200
+    }
+  ],
+  "cases": [
+    {
+      "civil": "2026-10-25T02:30:00",
+      "zone": "Europe/Berlin",
+      "fold": 0
+    },
+    {
+      "civil": "2026-10-25T02:30:00",
+      "zone": "Europe/Berlin",
+      "fold": 1
+    },
+    {
+      "civil": "2026-03-29T02:30:00",
+      "zone": "Europe/Berlin",
+      "gap": "reject"
+    }
+  ],
+  "rows": [
+    {
+      "row_id": "r1",
+      "instant": 1792888200
+    },
+    {
+      "row_id": "r2",
+      "instant": 1792891800
+    }
+  ]
+}

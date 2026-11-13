@@ -1,0 +1,5 @@
+# 资料及接口契约
+
+timestamp_instant为UTC整数秒，civil为无时区的公历年月日时分秒，zoned包含instant及IANA zone。civil_to_instant需zone；遇重叠需fold=0/1，未给则拒绝；gap策略为reject或shift_forward，后者加该gap的实际长度。tzdb_version由tzdata包版本冻结，不使用主机系统数据库。UTC分区[start,end)和本地date谓词均精确到秒；本期不支持闰秒和无限时间。temporal.py已有instant的UTC格式化和带摘要分区目录，未实现civil决议、类型表达式及本地日期裁剪。
+
+所有记录为合成仓资料；data/source.json保存原始字段和身份。storage.py负责摘要读取，table.py保存独立关系版本，relations.py保留SQL三值和袋语义。inspect只调用现有基础接口，不提供新增查询或管理能力。
